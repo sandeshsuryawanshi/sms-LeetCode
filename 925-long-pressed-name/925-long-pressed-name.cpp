@@ -16,6 +16,7 @@ public:
                 while(j<typed.length() && typed[j] == name[i])
                 j++;
             }
+            
         }
         
          return (i == name.length() && j == typed.length());
