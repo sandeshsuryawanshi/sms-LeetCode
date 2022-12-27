@@ -2,29 +2,35 @@ class Solution {
 public:
     vector<int> findRightInterval(vector<vector<int>>& intervals)
     {
-        map<int,int> mp;
+       int n = intervals.size();
+     if(n==1) 
+         return {-1};
         
-        int n=intervals.size();
+        map<int, int> mp;
         
-        vector<int>result(n,-1);
-        
-        for(int i=0;i<n;i++)
-        {
-            mp[intervals[i][0]]=i;
-            
+        for(int i=0; i<n; i++){
+            mp[intervals[i][0]] = i;
         }
         
-        for(int i=0;i<n;i++)
-        {
-            int end_i= intervals[i][1];
+        // MAP ENTERIES
+        // 1 -> 2
+        // 2 -> 1
+        // 3 -> 0
+        
+        vector<int> ans;
+        for(int i=0; i<n; i++){
             
-            auto end_j= mp.lower_bound(end_i);
+            int end = intervals[i][1];
             
-            if(end_j!=end(mp))
-            {
-                result[i]= end_j->second;
-            }
+            auto it = mp.lower_bound(end); //as start is unique, val returned is rgt interval
+            
+            if(it == mp.end())
+                ans.push_back(-1);
+            
+            
+            else ans.push_back(it->second);
+            
         }
-        return result;
+        return ans;
     }
 };
