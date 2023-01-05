@@ -2,14 +2,17 @@ class Solution {
 public:
     int divisorSubstrings(int num, int k) 
     {
-    int temp=num;
-        vector<int>v;
-        while(temp>0){
-            int ele=temp%10;
-            v.push_back(ele);
-            temp/=10;
-        }
-        reverse(v.begin(),v.end());
+     vector<int>v;
+        int temp=num;
+        while(temp>0)
+        {
+            int k1=temp%10;
+            v.push_back(k1);
+        
+            temp=temp/10;
+         }
+       
+         reverse(v.begin(),v.end());
         int i=0;
         int j=0;
         int count=0;
