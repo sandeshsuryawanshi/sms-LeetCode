@@ -4,7 +4,7 @@ public:
     {
         
        
-         unordered_map<int,int> m;
+         map<int,int> m;
      for(int j=0; j<nums.size(); j++) 
      {
          if(m.find(nums[j]) == m.end())
