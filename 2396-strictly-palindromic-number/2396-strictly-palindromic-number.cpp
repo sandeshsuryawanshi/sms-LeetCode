@@ -4,7 +4,7 @@ public:
      int Base(int i,int n)
      {
          vector<int>v;
-         while(n>0)    
+           while(n>0)    
            {    
             int k=n%i; 
              v.push_back(k);
