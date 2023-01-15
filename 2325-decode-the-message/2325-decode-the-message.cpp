@@ -8,7 +8,7 @@ public:
         for(int i=0;i<26;i++)
         {
              char p=97+i;
-            v.push_back(p);
+            v.push_back(p); // insert alphabet using aschii value of a to z alpha bet 
            }
         int j=0;
        
@@ -16,7 +16,7 @@ public:
         {
           if(isalpha(key[i]))
           {
-           if(mp.find(key[i])==mp.end())
+           if(mp.find(key[i])==mp.end())  // here is using map and inclue key-pair of key and alpha bet
            {
                mp[key[i]]=v[j];
                
