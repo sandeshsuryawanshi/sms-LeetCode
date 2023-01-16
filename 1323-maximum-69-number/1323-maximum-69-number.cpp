@@ -1,6 +1,6 @@
 class Solution {
 public:
-     int number(vector<int>v,int s)
+     int number(vector<int>v,int s)  // second part
      {
          int sum=0;
          
@@ -26,7 +26,7 @@ public:
         int num1=num;
         vector<int>v;
         
-        while(num1>0)
+        while(num1>0)    //first part
         {
             int k=num1%10;
             v.push_back(k);
