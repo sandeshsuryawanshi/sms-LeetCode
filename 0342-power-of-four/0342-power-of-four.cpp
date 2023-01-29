@@ -15,8 +15,7 @@ public:
      }
     bool isPowerOfFour(int n) 
     {
-        bool k=powerfour(n);
+       return powerfour(n);
         
-        return k;
     }
 };
