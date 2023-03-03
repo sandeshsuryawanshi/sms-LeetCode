@@ -16,5 +16,7 @@ public:
     {
          memset(dp,-1,sizeof(dp));
         return trio(n);
+        
+       
     }
 };
