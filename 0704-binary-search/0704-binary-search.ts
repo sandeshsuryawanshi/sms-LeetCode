@@ -1,9 +1,4 @@
-/**
- * @param {number[]} nums
- * @param {number} target
- * @return {number}
- */
-var search = function(nums, target)
+function search(nums: number[], target: number): number 
 {
         var s=0;
         var e=nums.length-1;
