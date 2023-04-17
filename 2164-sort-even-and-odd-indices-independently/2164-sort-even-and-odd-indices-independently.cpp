@@ -8,13 +8,15 @@ public:
         
             for(int i=0;i<nums.size();i++)
          {
-             if(i%2==0) 
-             {even.push_back(nums[i]);
+             if(i%2==0)
+             {
+                 even.push_back(nums[i]);
              }
-             else 
-             {odd.push_back(nums[i]);
+             else
+             {
+                 odd.push_back(nums[i]);
+             }
          }
-            }
          sort(even.begin(),even.end());
          sort(odd.begin(),odd.end(),greater<int>());
          
@@ -26,12 +28,12 @@ public:
               if(i%2==0)
               {
                   nums[i]=even[k++]; 
-               
+                  
               }
               else
               {
                   nums[i]=odd[j++]; 
-               
+                  
               }
           }
         return nums;
