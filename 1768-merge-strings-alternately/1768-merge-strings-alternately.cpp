@@ -5,7 +5,7 @@ public:
         int n=word1.size();
         int m=word2.size();
         string str="";
-        int k=max(n,m);
+      
         int i=0,j=0;
         while(i<n || j<m)
         {
